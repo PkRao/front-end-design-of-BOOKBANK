@@ -1,0 +1,75 @@
+
+<div class="form_container">
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit
+
+(formdata.value)">
+        <header>Download</header>
+        <br />
+      
+        <label>College</label><br />
+          <select class="college name">
+              <option disabled selected>--selected option--</option>
+          <option value="vcet">VCET</option>
+          <option value="canara">CANARA</option>
+          <option value="sdm">SDM</option>
+      </select>
+   
+        
+        
+        <br />
+        <label>Department</label>
+        
+        <select name="branch">
+                <option disabled selected>--selected option--</option>
+            <option value="cse">CSE</option>
+            <option value="mech">MECH</option>
+            <option value="civil">CIVIL</option>
+        </select>
+        <br />
+        <label>Semister</label>
+        <br />
+        <select name="sem">
+                <option disabled selected>--selected option--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br /><label>Subject</label>
+      
+        <select name="sub">
+                <option disabled selected>--selected option--</option>
+            <option value="ooc">OOC</option>
+            <option value="management">MANGMENT</option>
+            <option value="material design">CN</option>
+        </select>
+   
+        <br /><label>Year</label>
+      
+        <select name="year">
+                <option disabled selected>--selected option--</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+        </select>
+      
+       
+
+        <br /><label>Paper</label>
+        <br />
+        <select name="paper">
+                <option disabled selected>--selected option--</option>
+            <option value="2015">IA 1</option>
+            <option value="2016">IA 2</option>
+            <option value="2017">IA 3</option>
+            <option value="2017">SEM</option>
+            
+        </select>
+      
+        <br /><br />
+ 
+       
+        <button type="button" (click)="search()">Search</button>
+        <button type="button" (click)="cancelDownload()">Cancel</button>
+        <button type="button" (click)="cancel()">LogOut</button>
+           </form>
+</div>

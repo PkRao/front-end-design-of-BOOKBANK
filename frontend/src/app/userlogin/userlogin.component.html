@@ -1,0 +1,21 @@
+<div class="form_container">
+    <form [formGroup]="formdata">
+
+            <header>LOGIN</header>
+
+            <label>UserName <span></span></label>
+            <input type="text"  ng-model="userData.username" />
+
+            <label>Password <span></span></label>
+            <input type="password"  ng-model="userData.password" />
+
+            <button type="button" (click)="onClickSubmit()" >LogIn</button>
+           
+            &nbsp; &nbsp; &nbsp;
+         
+           <button type="button" (click)="onClickButton()" >Register</button>
+           
+
+          
+        </form>
+</div>

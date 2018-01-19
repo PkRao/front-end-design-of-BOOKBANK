@@ -1,0 +1,26 @@
+<div class="form_container">
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+        <header>REGISTER</header>
+       
+        <label>FirstName <span></span></label>
+        <input type="text" name="fname" formControlName="fname" ng-model="registerData.firstname"/>
+        
+        <label>LastName <span></span></label>
+        <input type="text" name="lname" formControlName="lname" ng-model="registerData.lastname" />
+        
+        <label>Address <span></span></label>
+        <input type="text" name="address" formControlName="address" ng-model="registerData.address" />
+        
+        <label>PhoneNumber<span></span></label>
+        <input type="text" name="phoneno" formControlName="phoneno" ng-model="registerData.phonenumber" />
+        
+        <label>Email<span></span></label>
+        <input type="text" name="email" formControlName="email" ng-model="registerData.email" />
+
+        <label>Password<span></span></label>
+        <input type="password" name="password" formControlName="password" ng-model="registerData.password" />
+            
+        <button type="button" (click)="onClickSubmit()" >Submit</button> 
+        <button type="button" (click)="onClickButton()">Cancel</button> 
+    </form>
+</div>

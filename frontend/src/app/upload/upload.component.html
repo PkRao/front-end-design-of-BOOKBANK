@@ -1,0 +1,117 @@
+<div class="form_container">
+    <form [formGroup]="formdata" >
+
+        <header>UPLOAD FILES
+s            
+        </header>
+        <br />
+
+        <label>College</label>
+        <br />
+        <select class="college name">
+                <option disabled selected>--selected option--</option>
+        <option value="Vcet">Vcet</option>
+        <option value="Sahyadhri">Sahyadhri</option>
+        <option value="Canara">Canara</option>
+        <option value="Shrinivas">Shrinivas</option>
+        <option value="Sdm">Sdm</option>
+        <option value="Shridevi">Shridevi</option>
+        </select>
+        <br />
+
+        <label>Department</label>
+        <br />
+        <select name="branch">
+                <option disabled selected>--selected option--</option>
+            <option value="Cse">Cse</option>
+            <option value="Ece">Ece</option>
+            <option value="Mech">Mech</option>
+            <option value="Civil">Civil</option>
+            <option value="Ise">Ise</option>
+        </select>
+        <br />
+
+        <label>Semester</label>
+        <br />
+        <select name="sem">
+                <option disabled selected>--selected option--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <br />
+
+        <label>Subject</label>
+        <br />
+        <select name="sub">
+                <option disabled selected>--selected option--</option>
+            <option value="Unix">Unix</option>
+            <option value="Java">Java</option>
+            <option value="Management">Management</option>
+            <option value="Ooc">Ooc</option>
+            <option value="Dbms">Dbms</option>
+            <option value="Ds">Ds</option>
+            
+        </select>
+        <br />
+
+        <label>Year</label>
+        <br />
+        <select name="year">
+                <option disabled selected>--selected option--</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+
+        </select>
+        <br />
+        <br />
+      
+                    
+
+         
+
+
+        <div *ngIf="isLoadingData" style="text-align:center" id="spinner">
+            <img src="./Content/page-loader.gif" />
+        </div>
+        <input #fileUpload type="file" (change)="fileChangeEvent($event)"
+               placeholder="Upload file..." multiple accept=".pdf" />
+        <br />
+        <br />
+        
+        <br />
+        <br />
+       
+        <button type="button" (click)="upload()">Upload</button>
+         
+        <button type="button" (click)="cancelUpload()">Cancel</button>
+        
+        <button type="button" (click)="cancel()">Logout</button>
+
+  <!--      <div *ngIf="filesToUpload?.length > 0">
+           <br /><p>{{filesToUpload?.length}} files selected : </p> 
+        </div>
+        <ul>
+            <li *ngFor="let fileName of selectedFileNames; let i = index">
+                {{fileName}}
+            </li>
+        </ul>
+        <div [innerHtml]="uploadResult"></div>
+        <div style="color:red">
+            {{errorMessage}}
+        </div> -->
+
+</form>
+</div>
